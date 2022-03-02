@@ -1,0 +1,11 @@
+.column{
+    background-color: lightblue;
+}
+.text{
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.input{
+    border-radius: 5px;
+}

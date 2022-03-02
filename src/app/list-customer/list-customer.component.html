@@ -1,0 +1,43 @@
+<div></div>
+  <div>
+    <label class="text" for="name">Search Name :</label>
+    <input class="input" type="text"  [(ngModel)]="names" (input)="search()" > 
+  </div>
+
+    <table class="table">
+      <thead class="column">
+        <tr >
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">City</th>
+          <th scope="col">Total</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let list of listcustomer">
+          <th scope="row">{{list.id}}</th>
+          <td>{{list.name}}</td>
+          <td>{{list.city}}</td>
+          <td>{{list.orderTotal | currency:coin}}</td>
+          <td>{{list.customerSince| date}}</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+      Number of Customers: {{ listcustomer.length }}
+    </table>
+
+  
+
+
